@@ -1,1 +1,20 @@
-<h1>Hello Huong</h1>
+<div class="mt-5 mb-5">
+    <div class="container">
+        <div class="row">
+            {{#each courses}}
+            <div class="col-lg-4 col-sm-6 col-md-4">
+                <div class="card card-course-item">
+                    <img src={{this.image}} class="card-img-top" alt={{this.name}}>
+                    <div class="card-body">
+                        <a href=`/courses/{{this.slug}}` class="card-title">{{name}}</a>
+                        <p class="card-text">
+                            {{this.description}}
+                        </p>
+                        <a href=/courses/{{this.slug}} class="btn btn-primary">Bắt đầu học</a>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>

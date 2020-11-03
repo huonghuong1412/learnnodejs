@@ -1,8 +1,10 @@
 const blogRouter = require('./blog');
 const siteRouter = require('./site');
+const courseRouter = require('./courses');
 
 function routes(app) {
     app.use('/blog', blogRouter);
+    app.use('/courses', courseRouter);
 
     app.use('/', siteRouter);
 

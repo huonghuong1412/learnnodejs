@@ -4,8 +4,13 @@ const handlebars = require('express-handlebars');
 const path = require('path');
 const app = express();
 
+const database = require('../src/config/database/index');
+
 // routes
 const routes = require('./routes/index');
+
+// connect batabase
+database.connect();
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded());
@@ -22,7 +27,7 @@ app.engine(
     }),
 );
 app.set('view engine', '.hbs');
-app.set('views', path.join(__dirname, 'resources/views'));
+app.set('views', path.join(__dirname, 'resources', 'views'));
 
 routes(app);
 

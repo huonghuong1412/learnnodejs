@@ -4,8 +4,8 @@ const BlogController = require('../app/controller/BlogController');
 
 // BlogController.index
 
-router.use('/:id', BlogController.detail);
+router.get('/:id', BlogController.detail);
 
-router.use('/', BlogController.index);
+router.get('/', BlogController.index);
 
 module.exports = router;

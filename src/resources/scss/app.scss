@@ -1,15 +1,53 @@
 @import './variable.scss';
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none !important;
+    transition: 0.3s all ease;
+}
+
 .footer {
     color: $green-color;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 footer {
     border-top: 1px solid #e1e1ee;
+    padding: 20px 0;
 }
 
 .header {
     color: $red-color;
     font-size: 16px;
+}
+
+.card-course-item {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #545353;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.card-title:hover {
+    color: #212020;
+}
+
+.course-desc {
+    margin: 15px 0;
+    font-size: 14px;
+}
+
+.course-title {
+    margin-bottom: 20px;
 }
