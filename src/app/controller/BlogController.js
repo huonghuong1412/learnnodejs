@@ -1,14 +1,13 @@
-
 class BlogController {
     // get /blogs
     index(req, res) {
-        res.render('blog')
+        res.render('blog');
     }
 
     // get detail
     detail(req, res) {
-        res.send("Detail")
+        res.send('Detail');
     }
 }
 
-module.exports = new BlogController;
+module.exports = new BlogController();
