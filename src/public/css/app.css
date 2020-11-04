@@ -7,6 +7,12 @@ a {
   text-decoration: none !important;
   transition: 0.3s all ease; }
 
+input:focus,
+textarea:focus,
+button:focus {
+  outline: none !important;
+  box-shadow: none !important; }
+
 .footer {
   color: green;
   font-size: 20px; }
@@ -39,3 +45,18 @@ footer {
 
 .course-title {
   margin-bottom: 20px; }
+
+.user {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center; }
+
+textarea {
+  border: none;
+  overflow: auto;
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  resize: none; }

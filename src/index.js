@@ -3,7 +3,7 @@ const express = require('express');
 const handlebars = require('express-handlebars');
 const path = require('path');
 const app = express();
-
+const methorOverride = require('method-override');
 const database = require('../src/config/database/index');
 
 // routes
@@ -15,6 +15,7 @@ database.connect();
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded());
 app.use(express.json());
+app.use(methorOverride('_method'));
 
 // morgan log
 // app.use(morgan('combined'))
@@ -24,6 +25,9 @@ app.engine(
     '.hbs',
     handlebars({
         extname: '.hbs',
+        helpers: {
+            eachIndex: (a, b) => a + b,
+        },
     }),
 );
 app.set('view engine', '.hbs');
